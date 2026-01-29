@@ -27,7 +27,7 @@ function Hero({ typeText, scrollToSection }: HeroProps) {
           <h1 className='text-5xl md:text-7xl font-bold mb-6 leading-tight'>
             Hi, I'm <span className='text-lime-400'>Stephen</span>
           </h1>
-          <div className='text-2xl md:text-3xl text-zinc-400 mb-8 h-12'>
+          <div className='text-2xl md:text-3xl text-white mb-8 h-12'>
             {typeText}
             <span className='animate-pulse text-lime-400'>|</span>
           </div>
