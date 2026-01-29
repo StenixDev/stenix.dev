@@ -160,8 +160,7 @@ function Contact() {
       <div className='mt-12 pt-12 border-t border-zinc-800 text-center'>
         <p className='text-zinc-500 text-sm'>
           © {year} <span className='text-white'>stenix</span>
-          <span className='text-lime-400'>.dev</span> • Built with Reactjs &
-          TailwindCSS
+          <span className='text-lime-400'>.dev</span>
         </p>
       </div>
     </section>
