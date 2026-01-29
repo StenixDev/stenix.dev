@@ -10,10 +10,26 @@ function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
   const [typedText, setTypedText] = useState<string>('');
-
+  const [stephenText, setStephenText] = useState<string>('');
+  const stephen = "Hi, I'm Stephen";
   const fullText = 'Your Personal Web Developer and Beyond';
 
   useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index <= stephen.length) {
+        setStephenText(stephen.slice(0, index));
+        index++;
+      } else {
+        clearInterval(timer);
+        // Start the fullText animation after stephen finishes
+        startFullTextAnimation();
+      }
+    }, 50);
+    return () => clearInterval(timer);
+  }, []);
+
+  const startFullTextAnimation = () => {
     let index = 0;
     const timer = setInterval(() => {
       if (index <= fullText.length) {
@@ -23,9 +39,7 @@ function App() {
         clearInterval(timer);
       }
     }, 50);
-    return () => clearInterval(timer);
-  }, []);
-
+  };
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -52,7 +66,11 @@ function App() {
           scrollToSection={scrollToSection}
         />
 
-        <Hero typeText={typedText} scrollToSection={scrollToSection} />
+        <Hero
+          typeText={typedText}
+          stephen={stephenText}
+          scrollToSection={scrollToSection}
+        />
       </header>
 
       {/* About Section */}

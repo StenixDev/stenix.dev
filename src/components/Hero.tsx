@@ -10,9 +10,10 @@ import {
 type HeroProps = {
   scrollToSection: (id: string) => void;
   typeText: string;
+  stephen: string;
 };
 
-function Hero({ typeText, scrollToSection }: HeroProps) {
+function Hero({ typeText, stephen, scrollToSection }: HeroProps) {
   return (
     <section
       id='home'
@@ -25,11 +26,13 @@ function Hero({ typeText, scrollToSection }: HeroProps) {
             <span className='text-sm'>Available for projects</span>
           </div>
           <h1 className='text-5xl md:text-7xl font-bold mb-6 leading-tight'>
-            Hi, I'm <span className='text-lime-400'>Stephen</span>
+            {/* Hi, I'm <span className='text-lime-400'>Stephen</span> */}
+            {stephen}
+            <span className='animate-pulse text-lime-400 ml-2'>&gt;</span>
           </h1>
           <div className='text-2xl md:text-3xl text-white mb-8 h-12'>
             {typeText}
-            <span className='animate-pulse text-lime-400'>|</span>
+            <span className='animate-pulse text-lime-400 '>.</span>
           </div>
           <p className='text-lg text-zinc-400 mb-12 max-w-2xl'>
             Independent developer crafting modern web experiences. Focused on
