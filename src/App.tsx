@@ -9,7 +9,7 @@ import Contact from './components/Contact';
 function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
-  const [typedText, setTypedText] = useState('');
+  const [typedText, setTypedText] = useState<string>('');
 
   const fullText = 'Your Personal Web Developer and Beyond';
 
@@ -52,7 +52,7 @@ function App() {
           scrollToSection={scrollToSection}
         />
 
-        <Hero typedText={typedText} scrollToSection={scrollToSection} />
+        <Hero typeText={typedText} scrollToSection={scrollToSection} />
       </header>
 
       {/* About Section */}
@@ -64,7 +64,7 @@ function App() {
         <div className='max-w-6xl mx-auto'>
           <div className=' p-8 border border-zinc-800 rounded-lg bg-zinc-900/30'>
             <div className='flex items-start gap-4'>
-              <Brain className='w-6 h-6 text-lime-400 mt-1 flex-shrink-0' />
+              <Brain className='w-6 h-6 text-lime-400 mt-1 shrink-0' />
               <div>
                 <h3 className='text-xl font-semibold mb-3'>
                   Continuous Learning

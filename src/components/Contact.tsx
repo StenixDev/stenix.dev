@@ -44,7 +44,9 @@ function Contact() {
     setFormData({ name: '', email: '', message: '' });
   };
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   return (
@@ -104,7 +106,7 @@ function Contact() {
               Have a project in mind or just want to chat about tech? I'm always
               open to interesting conversations and new opportunities.
             </p>
-            <div className='space-y-6'>
+            <form onSubmit={handleSubmit} className='space-y-6'>
               <div>
                 <label className='block text-sm text-zinc-400 mb-2'>Name</label>
                 <input
@@ -144,13 +146,13 @@ function Contact() {
               </div>
               <div className='flex justify-end'>
                 <button
-                  onClick={handleSubmit}
+                  type='submit'
                   className='w-full md:w-auto px-8 py-3 bg-lime-400 text-zinc-950 rounded hover:bg-lime-500 transition-colors font-medium'
                 >
                   Send
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

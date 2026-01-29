@@ -7,7 +7,12 @@ import {
   ChevronRight,
 } from 'lucide-react';
 
-function Hero({ typedText, scrollToSection }) {
+type HeroProps = {
+  scrollToSection: (id: string) => void;
+  typeText: string;
+};
+
+function Hero({ typeText, scrollToSection }: HeroProps) {
   return (
     <section
       id='home'
@@ -23,7 +28,7 @@ function Hero({ typedText, scrollToSection }) {
             Hi, I'm <span className='text-lime-400'>Stephen</span>
           </h1>
           <div className='text-2xl md:text-3xl text-zinc-400 mb-8 h-12'>
-            {typedText}
+            {typeText}
             <span className='animate-pulse text-lime-400'>|</span>
           </div>
           <p className='text-lg text-zinc-400 mb-12 max-w-2xl'>
