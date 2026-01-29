@@ -1,1 +1,7 @@
 @import 'tailwindcss';
+
+.container-cover {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url('/cover-BG.jpg') top / cover no-repeat;
+}
