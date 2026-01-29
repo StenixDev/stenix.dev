@@ -1,6 +1,14 @@
 import { useState } from 'react';
 
-function Navigation({ isScrolled, activeSection, scrollToSection }) {
+function Navigation({
+  isScrolled,
+  activeSection,
+  scrollToSection,
+}: {
+  isScrolled: boolean;
+  activeSection: string;
+  scrollToSection: (section: string) => void;
+}) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleNavClick = (section: string) => {
