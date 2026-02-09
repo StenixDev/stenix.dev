@@ -1,11 +1,14 @@
 import { Code2 } from 'lucide-react';
-import profile from '../assets/profile.png';
 
 const skills = [
-  { name: 'Frontend Development', level: 90 },
-  { name: 'Backend Architecture', level: 85 },
-  { name: 'UI/UX Design', level: 80 },
-  { name: 'DevOps & Cloud', level: 75 },
+  {
+    name: 'Frontend Development (React, Tailwind, etc.)',
+    level: 95,
+  },
+  { name: 'Backend Development (APIs, Databases, Auth)', level: 90 },
+  { name: 'AI-Assisted Development (LLMs, automation, tooling)', level: 90 },
+  { name: 'DevOps & Deployment (CI/CD, VPS, Hosting)', level: 85 },
+  { name: 'Security & Cybersecurity Fundamentals', level: 75 },
 ];
 
 function About() {
@@ -25,23 +28,17 @@ function About() {
               Development.
             </p>
             <p className='text-zinc-400 leading-relaxed mb-6'>
-              What started as a team venture has evolved into a focused solo
-              practice. I now dedicate my time to crafting personalized
-              solutions, experimenting with new technologies, and continuously
-              expanding my skillset.
-            </p>
-            <p className='text-zinc-400 leading-relaxed'>
-              Every project is an opportunity to learn, iterate, and deliver
-              something meaningful. I believe in writing code that's not just
-              functional, but maintainable and elegant.
+              I'm always eager to expand my skill set based on project needs.
+              Whether it's a new framework, library, or technology stack, I'm
+              committed to learning what's necessary to deliver the best
+              solution for your project. My adaptability and quick learning
+              ability ensure that I can tackle diverse challenges effectively.
             </p>
           </div>
           <div>
-            <div className='flex justify-center mb-6'>
-              <img src={profile} alt='stenix' width={120} />
-            </div>
-            <h3 className='text-xl font-semibold mb-6 text-lime-400'>
-              Core Skills
+            <div className='flex justify-center mb-6'></div>
+            <h3 className='text-xl font-semibold mb-6 text-lime-400 text-center'>
+              Core Technical Skills
             </h3>
             {skills.map((skill, i) => (
               <div key={i} className='mb-6'>

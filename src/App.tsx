@@ -11,7 +11,7 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [typedText, setTypedText] = useState<string>('');
   const [stephenText, setStephenText] = useState<string>('');
-  const stephen = "Hi, I'm Stephen";
+  const stephen = `Hi, I'm Stephen`;
   const fullText = 'Your Personal Web Developer and Beyond';
 
   useEffect(() => {

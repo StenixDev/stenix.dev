@@ -6,6 +6,7 @@ import {
   Instagram,
   ChevronRight,
 } from 'lucide-react';
+import profile from '../assets/profile.png';
 
 type HeroProps = {
   scrollToSection: (id: string) => void;
@@ -19,11 +20,11 @@ function Hero({ typeText, stephen, scrollToSection }: HeroProps) {
       id='home'
       className='min-h-screen flex items-center justify-center  px-6 pt-20 pb-10'
     >
-      <div className='max-w-4xl w-full flex flex-col items-center '>
+      <div className='max-w-4xl w-full flex flex-col items-center  '>
         <div className='mb-8'>
-          <div className='flex items-center gap-2 text-lime-400 mb-4'>
+          <div className='flex items-center gap-2 text-lime-400 mb-4 '>
             <span className='w-2 h-2 bg-lime-400 rounded-full animate-pulse'></span>
-            <span className='text-sm'>Available for projects</span>
+            <span className='text-sm '>Available for projects</span>
           </div>
           <h1 className='text-5xl md:text-7xl font-bold mb-6 leading-tight'>
             {/* Hi, I'm <span className='text-lime-400'>Stephen</span> */}
@@ -32,9 +33,15 @@ function Hero({ typeText, stephen, scrollToSection }: HeroProps) {
           </h1>
           <div className='text-2xl md:text-3xl text-white mb-8 h-12'>
             {typeText}
-            <span className='animate-pulse text-lime-400 '>.</span>
           </div>
-          <p className='text-lg text-zinc-400 mb-12 max-w-2xl'>
+
+          <p className='text-lg text-lime-400 mb-12 max-w-2xl '>
+            <img
+              src={profile}
+              alt='stenix'
+              width={120}
+              className='float-left mr-4 mb-2 '
+            />
             Independent developer crafting modern web experiences. Focused on
             clean code, continuous learning, and building solutions that matter.
           </p>
@@ -47,9 +54,9 @@ function Hero({ typeText, stephen, scrollToSection }: HeroProps) {
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className='px-8 py-3 border border-zinc-700 rounded hover:border-lime-400 hover:text-lime-400 transition-colors font-medium'
+              className='px-8 py-3 border border-zinc-700 rounded hover:border-lime-400 hover:text-lime-400 transition-colors font-medium cursor-pointer'
             >
-              Get In Touch
+              Hire Me!
             </button>
           </div>
         </div>
