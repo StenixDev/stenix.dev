@@ -88,10 +88,10 @@ function App() {
                   Continuous Learning
                 </h3>
                 <p className='text-zinc-400 leading-relaxed mb-4'>
-                  Beyond active projects, I'm constantly exploring new
-                  technologies, contributing to open source, and documenting my
-                  learning journey on GitHub. From system architecture to modern
-                  frameworks, every day is an opportunity to grow.
+                  Beyond active projects, I actively explore new technologies,
+                  practice through personal repositories, and document my
+                  learning journey on GitHub. Every day is a chance to improve
+                  my understanding of system design and modern frameworks.
                 </p>
                 <a
                   href='https://github.com/StenixDev'

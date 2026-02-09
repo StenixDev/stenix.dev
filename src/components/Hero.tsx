@@ -1,7 +1,6 @@
 import {
   Github,
   Linkedin,
-  Youtube,
   Facebook,
   Instagram,
   ChevronRight,
@@ -67,7 +66,7 @@ function Hero({ typeText, stephen, scrollToSection }: HeroProps) {
               icon: Linkedin,
               url: 'https://www.linkedin.com/in/stephemarkg/',
             },
-            { icon: Youtube, url: 'https://www.youtube.com/@smedia91/' },
+
             { icon: Facebook, url: 'https://www.facebook.com/stenix.dev/' },
             { icon: Instagram, url: 'https://www.instagram.com/stenix91/' },
           ].map((social, i) => (
