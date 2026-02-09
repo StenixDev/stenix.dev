@@ -27,7 +27,7 @@ function App() {
       }
     }, 50);
     return () => clearInterval(timer);
-  }, []);
+  }, [stephen]);
 
   const startFullTextAnimation = () => {
     let index = 0;
