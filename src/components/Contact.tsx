@@ -19,7 +19,11 @@ function Contact() {
 
     emailjs
       .sendForm('service_wcb7mxh', 'template_uxhombi', form.current!, {
+<<<<<<< HEAD
         publicKey: import.meta.env.VITE_SENDEMAIL_PUBLIC,
+=======
+        publicKey: 'ZhjpIv5vuzI16M4jH',
+>>>>>>> e70e5fa1708f5bf4852600e0835927605e1f575e
       })
       .then(
         () => {
