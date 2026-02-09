@@ -19,7 +19,7 @@ function Contact() {
 
     emailjs
       .sendForm('service_wcb7mxh', 'template_uxhombi', form.current!, {
-        publicKey: 'ZhjpIv5vuzI16M4jH',
+        publicKey: import.meta.env.VITE_SENDEMAIL_PUBLIC,
       })
       .then(
         () => {
@@ -109,7 +109,7 @@ function Contact() {
                   type='submit'
                   className='w-full md:w-auto px-8 py-3 bg-lime-400 text-zinc-950 rounded hover:bg-lime-500 transition-colors font-medium'
                 >
-                  Send
+                  {isSending ? 'Sending' : 'Send'}
                 </button>
               </div>
             </form>
