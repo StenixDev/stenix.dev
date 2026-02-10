@@ -5,7 +5,7 @@ function ContactForm({
   setIsSent,
   scrollToSection,
 }: {
-  setIsSent: boolean;
+  setIsSent: (arg0: boolean) => void;
   scrollToSection: (section: string) => void;
 }) {
   const [isSending, setIsSending] = useState<boolean>(false);

@@ -94,7 +94,7 @@ function App() {
                   my understanding of system design and modern frameworks.
                 </p>
                 <a
-                  href='https://github.com/StenixDev'
+                  href='https://github.com/StenixDev?tab=repositories'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='inline-flex items-center gap-2 text-lime-400 hover:underline'
