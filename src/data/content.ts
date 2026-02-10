@@ -24,3 +24,14 @@ export const projects = [
     status: 'Research',
   },
 ];
+
+export const skills = [
+  {
+    name: 'Frontend Development (React, Tailwind, etc.)',
+    level: 95,
+  },
+  { name: 'Backend Development (APIs, Databases, Auth)', level: 90 },
+  { name: 'AI-Assisted Development (LLMs, automation, tooling)', level: 90 },
+  { name: 'DevOps & Deployment (CI/CD, VPS, Hosting)', level: 85 },
+  { name: 'Security & Cybersecurity Fundamentals', level: 75 },
+];
