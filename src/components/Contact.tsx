@@ -43,7 +43,7 @@ function Contact() {
             </div>
 
             {isSent ? (
-              'the contact has been sent'
+              "Thanks for reaching out! I've received your message and will get back to you soon."
             ) : (
               <ContactForm setIsSent={setIsSent} />
             )}

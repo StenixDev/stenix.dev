@@ -61,11 +61,14 @@ function ContactForm({ setIsSent }: { setIsSent: (value: boolean) => void }) {
     <>
       <p className='text-zinc-400 mb-12 text-lg'>
         If you have an idea, a small business, or a project that needs a
-        developer who's flexible and eager to grow, I'd love to hear about it.
+        flexible developer, I'd love to hear about it.
+        <span className='text-xs px-3 py-1 bg-zinc-800 rounded-full text-lime-400 border border-zinc-700 float-right mt-2'>
+          <a href='mailto:connect@stenix.dev'>connect@stenix.dev</a>
+        </span>
       </p>
       <form onSubmit={sendEmail} ref={form} className='space-y-6'>
         <div>
-          <label className='block text-sm text-zinc-400 mb-2'>Name</label>
+          <label className='block text-sm text-lime-400 mb-2'>Name</label>
           <input
             disabled={isSending}
             type='text'
@@ -76,18 +79,18 @@ function ContactForm({ setIsSent }: { setIsSent: (value: boolean) => void }) {
           />
         </div>
         <div>
-          <label className='block text-sm text-zinc-400 mb-2'>Email</label>
+          <label className='block text-sm text-lime-400 mb-2'>Email</label>
           <input
             disabled={isSending}
             type='email'
             name='email'
             className='w-full bg-zinc-900 border border-zinc-800 rounded px-4 py-3 focus:outline-none focus:border-lime-400 transition-colors'
-            placeholder='your.email@example.com'
+            placeholder='email@example.com'
             required
           />
         </div>
         <div>
-          <label className='block text-sm text-zinc-400 mb-2'>Message</label>
+          <label className='block text-sm text-lime-400 mb-2'>Message</label>
           <textarea
             disabled={isSending}
             rows={6}
