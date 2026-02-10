@@ -5,12 +5,16 @@ import { projects } from '../data/content';
 
 import ContactForm from './ContactForm';
 
-function Contact() {
+function Contact({
+  scrollToSection,
+}: {
+  scrollToSection: (section: string) => void;
+}) {
   const [isSent, setIsSent] = useState<boolean>(false);
   const year = new Date().getFullYear();
 
   return (
-    <section id='contact' className='px-6 py-10 md:pt-32 pb-10  bg-zinc-900/50'>
+    <section className='px-6 py-10 md:pt-32 pb-10  bg-zinc-900/50'>
       <div className='max-w-6xl mx-auto'>
         <div className='flex flex-col md:flex-row gap-10'>
           <div className='flex-1'>
@@ -36,16 +40,27 @@ function Contact() {
               ))}
             </div>
           </div>
-          <div className=' flex flex-col flex-1'>
+          <div id='contact' className=' flex flex-col flex-1 scroll-mt-20'>
             <div className='flex items-center gap-3 mb-12'>
               <Mail className='w-6 h-6 text-lime-400' />
               <h2 className='text-3xl font-bold'>Let's Connect</h2>
             </div>
 
             {isSent ? (
-              "Thanks for reaching out! I've received your message and will get back to you soon."
+              <div className='border  rounded-lg p-6 border-lime-400 bg-zinc-900/50'>
+                <div className='flex items-center justify-between mb-4'></div>
+                <h3 className='text-xl font-semibold mb-3 text-lime-400 '>
+                  Thanks for reaching out!
+                </h3>
+                <p className='text-zinc-400 text-sm mb-4 leading-relaxed'>
+                  I've received your message and will get back to you soon.
+                </p>
+              </div>
             ) : (
-              <ContactForm setIsSent={setIsSent} />
+              <ContactForm
+                scrollToSection={scrollToSection}
+                setIsSent={setIsSent}
+              />
             )}
           </div>
         </div>

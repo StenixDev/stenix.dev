@@ -77,8 +77,8 @@ function App() {
 
       <About />
 
-      {/* Journey Section */}
-      <section id='journey' className='py-10 md:py-24 px-6'>
+      {/* Learning Section */}
+      <section id='learning' className='py-10 md:py-24 px-6'>
         <div className='max-w-6xl mx-auto'>
           <div className=' p-8 border border-zinc-800 rounded-lg bg-zinc-900/30'>
             <div className='flex items-start gap-4'>
@@ -108,7 +108,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <Contact />
+      <Contact scrollToSection={scrollToSection} />
     </div>
   );
 }

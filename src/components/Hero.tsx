@@ -1,10 +1,4 @@
-import {
-  Github,
-  Linkedin,
-  Facebook,
-  Instagram,
-  ChevronRight,
-} from 'lucide-react';
+import { Github, Linkedin, Facebook, Instagram, Plus } from 'lucide-react';
 import profile from '../assets/profile.png';
 
 type HeroProps = {
@@ -45,12 +39,13 @@ function Hero({ typeText, stephen, scrollToSection }: HeroProps) {
             clean code, continuous learning, and building solutions that matter.
           </p>
           <div className='flex flex-wrap gap-4 justify-center'>
-            <button
-              onClick={() => scrollToSection('journey')}
+            <a
               className='px-8 py-3 bg-lime-400 text-zinc-950 rounded hover:bg-lime-500 transition-colors font-medium flex items-center gap-2'
+              href='https://www.linkedin.com/in/stephemarkg/'
+              target='_blank'
             >
-              View My Journey <ChevronRight className='w-4 h-4' />
-            </button>
+              Connect <Plus className='w-4 h-4' />
+            </a>
             <button
               onClick={() => scrollToSection('contact')}
               className='px-8 py-3 border border-zinc-700 rounded hover:border-lime-400 hover:text-lime-400 transition-colors font-medium cursor-pointer'

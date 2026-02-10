@@ -1,7 +1,13 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-function ContactForm({ setIsSent }: { setIsSent: (value: boolean) => void }) {
+function ContactForm({
+  setIsSent,
+  scrollToSection,
+}: {
+  setIsSent: boolean;
+  scrollToSection: (section: string) => void;
+}) {
   const [isSending, setIsSending] = useState<boolean>(false);
 
   const form = useRef<HTMLFormElement | null>(null);
@@ -46,6 +52,7 @@ function ContactForm({ setIsSent }: { setIsSent: (value: boolean) => void }) {
         () => {
           console.log('SUCCESS!');
           setIsSent(true);
+          scrollToSection('contact');
         },
         (error) => {
           console.log('FAILED...', error.text);

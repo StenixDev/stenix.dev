@@ -34,22 +34,20 @@ function Navigation({
 
         {/* Desktop Menu */}
         <div className='hidden md:flex items-center gap-8'>
-          {['about', 'journey', 'contact'].map((item) => (
+          {['about', 'learning'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item)}
-              className={`text-sm hover:text-lime-400 transition-colors capitalize ${activeSection === item ? 'text-lime-400' : 'text-white-400'}`}
+              className={`cursor-pointer text-sm hover:text-lime-400 transition-colors capitalize ${activeSection === item ? 'text-lime-400' : 'text-white-400'}`}
             >
               {item}
             </button>
           ))}
           <a
-            href='https://github.com/StenixDev'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='px-4 py-2 bg-lime-400/10 text-lime-400 rounded border border-lime-400/20 hover:bg-lime-400/20 transition-colors text-sm'
+            onClick={() => scrollToSection('contact')}
+            className='px-4 py-2 bg-lime-400/10 text-lime-400 rounded border border-lime-400/20 hover:bg-lime-400/20 transition-colors text-sm cursor-pointer'
           >
-            Connect
+            Contact
           </a>
         </div>
 

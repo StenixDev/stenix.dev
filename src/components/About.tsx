@@ -3,7 +3,10 @@ import { skills } from '../data/content';
 
 function About() {
   return (
-    <section id='about' className='py-10 md:py-32  px-6 bg-zinc-900/50'>
+    <section
+      id='about'
+      className='py-10 md:py-32  px-6 bg-zinc-900/50 scroll-mt-20'
+    >
       <div className='max-w-4xl mx-auto'>
         <div className='grid md:grid-cols-2 gap-12'>
           <div>

@@ -34,4 +34,5 @@ export const skills = [
   { name: 'AI-Assisted Development (LLMs, automation, tooling)', level: 90 },
   { name: 'DevOps & Deployment (CI/CD, VPS, Hosting)', level: 85 },
   { name: 'Security & Cybersecurity Fundamentals', level: 75 },
+  { name: 'Creative & Media Production', level: 85 },
 ];
