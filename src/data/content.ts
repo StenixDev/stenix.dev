@@ -28,11 +28,11 @@ export const projects = [
 export const skills = [
   {
     name: 'Frontend Development (React, Tailwind, etc.)',
-    level: 95,
+    level: 89,
   },
-  { name: 'Backend Development (APIs, Databases, Auth)', level: 90 },
-  { name: 'AI-Assisted Development (LLMs, automation, tooling)', level: 90 },
-  { name: 'DevOps & Deployment (CI/CD, VPS, Hosting)', level: 85 },
-  { name: 'Security & Cybersecurity Fundamentals', level: 75 },
-  { name: 'Creative & Media Production', level: 85 },
+  { name: 'Backend Development (APIs, Databases, Auth)', level: 82 },
+  { name: 'AI-Assisted Development (LLMs, automation, tooling)', level: 79 },
+  { name: 'DevOps & Deployment (CI/CD, VPS, Hosting)', level: 77 },
+  { name: 'Security & Cybersecurity Fundamentals', level: 61 },
+  { name: 'Creative & Media Production', level: 78 },
 ];

@@ -1,5 +1,5 @@
 import { Code2 } from 'lucide-react';
-import { skills } from '../data/content';
+import Skills from './Skills';
 
 function About() {
   return (
@@ -28,26 +28,7 @@ function About() {
               ability ensure that I can tackle diverse challenges effectively.
             </p>
           </div>
-          <div>
-            <div className='flex justify-center mb-6'></div>
-            <h3 className='text-xl font-semibold mb-6 text-lime-400 text-center'>
-              Core Technical Skills
-            </h3>
-            {skills.map((skill, i) => (
-              <div key={i} className='mb-6'>
-                <div className='flex justify-between mb-2'>
-                  <span className='text-sm text-zinc-400'>{skill.name}</span>
-                  <span className='text-sm text-lime-400'>{skill.level}%</span>
-                </div>
-                <div className='h-2 bg-zinc-800 rounded-full overflow-hidden'>
-                  <div
-                    className='h-full bg-linear-to-r from-lime-500 to-lime-400 transition-all duration-1000'
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Skills />
         </div>
       </div>
     </section>
