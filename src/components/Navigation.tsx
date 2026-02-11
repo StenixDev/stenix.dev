@@ -89,7 +89,7 @@ function Navigation({
         }`}
       >
         <div className='flex flex-col gap-4 p-6'>
-          {['about', 'journey', 'contact'].map((item) => (
+          {['about', 'learning'].map((item) => (
             <button
               key={item}
               onClick={() => handleNavClick(item)}
@@ -101,13 +101,10 @@ function Navigation({
             </button>
           ))}
           <a
-            href='https://github.com/StenixDev'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='px-4 py-2 bg-lime-400/10 text-lime-400 rounded border border-lime-400/20 hover:bg-lime-400/20 transition-colors text-sm text-center mt-2'
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={() => handleNavClick('contact')}
+            className='px-4 py-2 bg-lime-400/10 text-lime-400 rounded border border-lime-400/20 hover:bg-lime-400/20 transition-colors text-sm cursor-pointer'
           >
-            Connect
+            Contact
           </a>
         </div>
       </div>

@@ -1,10 +1,11 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Brain, ChevronRight } from 'lucide-react';
+
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
 import Contact from './components/Contact';
+import Learning from './components/Learning';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -78,36 +79,11 @@ function App() {
       <About />
 
       {/* Learning Section */}
-      <section id='learning' className='py-10 md:py-24 px-6'>
-        <div className='max-w-6xl mx-auto'>
-          <div className=' p-8 border border-zinc-800 rounded-lg bg-zinc-900/30'>
-            <div className='flex items-start gap-4'>
-              <Brain className='w-6 h-6 text-lime-400 mt-1 shrink-0' />
-              <div>
-                <h3 className='text-xl font-semibold mb-3'>
-                  Continuous Learning
-                </h3>
-                <p className='text-zinc-400 leading-relaxed mb-4'>
-                  Beyond active projects, I actively explore new technologies,
-                  practice through personal repositories, and document my
-                  learning journey on GitHub. Every day is a chance to improve
-                  my understanding of system design and modern frameworks.
-                </p>
-                <a
-                  href='https://github.com/StenixDev?tab=repositories'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='inline-flex items-center gap-2 text-lime-400 hover:underline'
-                >
-                  View my GitHub activity <ChevronRight className='w-4 h-4' />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <Learning />
 
       {/* Contact Section */}
+
       <Contact scrollToSection={scrollToSection} />
     </div>
   );

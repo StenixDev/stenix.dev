@@ -1,3 +1,4 @@
+import { motion } from 'motion/react'; // or "framer-motion"
 import { Mail } from 'lucide-react';
 import { useState } from 'react';
 import { Handshake } from 'lucide-react';
@@ -25,18 +26,28 @@ function Contact({
 
             <div className='flex flex-col gap-6'>
               {projects.map((project, i) => (
-                <div
-                  key={i}
-                  className='border border-zinc-800 rounded-lg p-6 hover:border-lime-400/50 transition-all group bg-zinc-900/50'
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.8,
+                    ease: 'easeOut',
+                  }}
+                  viewport={{ once: true, amount: 0.3 }}
                 >
-                  <div className='flex items-center justify-between mb-4'></div>
-                  <h3 className='text-xl font-semibold mb-3 group-hover:text-lime-400 transition-colors'>
-                    {project.title}
-                  </h3>
-                  <p className='text-zinc-400 text-sm mb-4 leading-relaxed'>
-                    {project.description}
-                  </p>
-                </div>
+                  <div
+                    key={i}
+                    className='border border-zinc-800 rounded-lg p-6 hover:border-lime-400/50 transition-all group bg-zinc-900/50'
+                  >
+                    <div className='flex items-center justify-between mb-4'></div>
+                    <h3 className='text-xl font-semibold mb-3 group-hover:text-lime-400 transition-colors'>
+                      {project.title}
+                    </h3>
+                    <p className='text-zinc-400 text-sm mb-4 leading-relaxed'>
+                      {project.description}
+                    </p>
+                  </div>
+                </motion.div>
               ))}
             </div>
           </div>
