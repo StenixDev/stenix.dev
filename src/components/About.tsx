@@ -22,7 +22,7 @@ function About() {
                 <h2 className='text-3xl font-bold'>About Me</h2>
               </div>
               <p className='text-zinc-400 leading-relaxed mb-6'>
-                I'm an independent developer with a passion for building clean,
+                I'm an independent developer with a passion for building
                 functional web applications. My journey in tech spans CompTech,
                 Networking, Cybersecurity, System Administration, and Web
                 Development.

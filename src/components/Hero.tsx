@@ -41,9 +41,8 @@ function Hero({ typeText, stephen, scrollToSection }: HeroProps) {
                 width={120}
                 className='float-left mr-4 mb-2 '
               />
-              Independent developer crafting modern web experiences. Focused on
-              clean code, continuous learning, and building solutions that
-              matter.
+              Independent developer focused on crafting modern web experiences
+              and building solutions that matter.
             </p>
             <div className='flex flex-wrap gap-4 justify-center'>
               <a
