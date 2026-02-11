@@ -24,13 +24,16 @@ function About() {
               <p className='text-zinc-400 leading-relaxed mb-6'>
                 I'm an independent developer with a passion for building
                 functional web applications. My journey in tech spans CompTech,
-                Networking, Cybersecurity, System Administration, and Web
-                Development.
+                Networking, Cybersecurity, System Administration, and{' '}
+                <strong className='text-lime-400'>Web Development</strong>.
               </p>
               <p className='text-zinc-400 leading-relaxed mb-6'>
                 I'm always eager to expand my skill set based on project needs.
-                Whether it's a new framework, library, or technology stack, I'm
-                committed to learning what's necessary to deliver the best
+                Whether it's a{' '}
+                <strong className='text-lime-400'>
+                  new framework, library, or technology stack
+                </strong>
+                , I'm committed to learning what's necessary to deliver the best
                 solution for your project. My adaptability and quick learning
                 ability ensure that I can tackle diverse challenges effectively.
               </p>
