@@ -88,24 +88,26 @@ function Navigation({
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
-        <div className='flex flex-col gap-4 p-6'>
+        <div className='flex flex-col gap-4 p-6 '>
           {['about', 'learning'].map((item) => (
             <button
               key={item}
               onClick={() => handleNavClick(item)}
-              className={`text-left text-base hover:text-lime-400 transition-colors capitalize ${
+              className={`text-left text-base hover:text-lime-400 transition-colors capitalize  ${
                 activeSection === item ? 'text-lime-400' : 'text-white-400'
               }`}
             >
               {item}
             </button>
           ))}
-          <a
-            onClick={() => handleNavClick('contact')}
-            className='px-4 py-2 bg-lime-400/10 text-lime-400 rounded border border-lime-400/20 hover:bg-lime-400/20 transition-colors text-sm cursor-pointer'
-          >
-            Contact
-          </a>
+          <div>
+            <a
+              onClick={() => handleNavClick('contact')}
+              className='px-4 py-2 bg-lime-400/10 text-lime-400 rounded border border-lime-400/20 hover:bg-lime-400/20 transition-colors text-sm cursor-pointer'
+            >
+              Contact
+            </a>
+          </div>
         </div>
       </div>
     </nav>
